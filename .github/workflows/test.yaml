@@ -19,8 +19,8 @@ jobs:
           dvc repro 
           echo "## Metrics" >> report.md
           git fetch --prune
-          dvc metrics diff --targets metrics.json -- main workspace >> report.md
-          dvc metrics diff --targets metrics.json -- main workspace
+          dvc metrics diff --targets metrics.json -- HEAD workspace >> report.md
+          dvc metrics diff --targets metrics.json -- HEAD workspace
 
       
           # print it
