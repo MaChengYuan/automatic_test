@@ -3,6 +3,7 @@ from sklearn.datasets import make_regression
 from sklearn.metrics import mean_absolute_error
 import numpy as np
 import pandas as pd
+import json
 
 
 
@@ -17,5 +18,6 @@ y_hat = model.predict(X_test)
 result = mean_absolute_error(y_hat,y)
 
 
-with open('result.txt',"w") as outfile:
-     outfile.write(f"mean_absolute_error : {result}")
+with open('metrics.json',"w") as outfile:
+    #  outfile.write(f"mean_absolute_error : {result}")
+    json.dump({"mean_absolute_error":result},outfile)

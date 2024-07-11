@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python3 train.py
+    deps:
+    - path: train.py
+      hash: md5
+      md5: 6ef53eaf1c8749cb86ad06ddb0f2bfdf
+      size: 436
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: cb6c6c639d5659a9be08232df93c7cf0
+      size: 504
+  test_model:
+    cmd: python3 test.py
+    deps:
+    - path: models/model.pkl
+      hash: md5
+      md5: cb6c6c639d5659a9be08232df93c7cf0
+      size: 504
+    - path: test.py
+      hash: md5
+      md5: 58ce1f793a6d182ed720db9e23f08bb5
+      size: 509
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 797dc14a75dcfa616a19800dacc9b879
+      size: 42
