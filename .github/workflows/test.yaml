@@ -20,6 +20,8 @@ jobs:
           echo "## Metrics" >> report.md
           git fetch --prune
           dvc metrics diff --targets metrics.json -- main workspace >> report.md
+          dvc metrics diff --targets metrics.json -- main workspace
+
       
           # print it
           cml comment create report.md
