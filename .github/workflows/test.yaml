@@ -19,7 +19,7 @@ jobs:
           dvc repro 
           echo "## Metrics" >> report.md
           git fetch --prune
-          dvc metrics diff main --show-md > report.md
+          dvc metrics diff --targets metrics.json -- main 
       
           # print it
           cml comment create report.md
