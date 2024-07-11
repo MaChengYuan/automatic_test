@@ -19,7 +19,7 @@ jobs:
           dvc repro 
           # Run the test
           echo "## workplace vs main " >> report.md
-          git fetch --prune
+    
           
 
           # print it
