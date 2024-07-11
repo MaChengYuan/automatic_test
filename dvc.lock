@@ -5,20 +5,20 @@ stages:
     deps:
     - path: train.py
       hash: md5
-      md5: 6ef53eaf1c8749cb86ad06ddb0f2bfdf
-      size: 436
+      md5: 4551b04e4732310321ed17c5c3b9f6c1
+      size: 442
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: cb6c6c639d5659a9be08232df93c7cf0
-      size: 504
+      md5: e1d163eed66a133191d9dadfb20a6347
+      size: 604
   test_model:
     cmd: python3 test.py
     deps:
     - path: models/model.pkl
       hash: md5
-      md5: cb6c6c639d5659a9be08232df93c7cf0
-      size: 504
+      md5: e1d163eed66a133191d9dadfb20a6347
+      size: 604
     - path: test.py
       hash: md5
       md5: 58ce1f793a6d182ed720db9e23f08bb5
@@ -26,5 +26,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 797dc14a75dcfa616a19800dacc9b879
-      size: 42
+      md5: 85156896c48454aeb813282fdfc9880c
+      size: 43
