@@ -2,3 +2,4 @@ joblib
 numpy
 scipy
 scikit-learn
+pandas
