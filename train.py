@@ -7,7 +7,7 @@ import os
 X, y = make_regression(10000,n_features = 10)
 
 # Train a model
-reg = Ridge().fit(X, y.ravel())
+reg = Lasso().fit(X, y.ravel())
 # Print out training r2
 print(reg.score(X,y.ravel() ))
 
